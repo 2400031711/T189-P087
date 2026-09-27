@@ -1,0 +1,30 @@
+{
+  "experiment": "Azure Resilience Failover Test",
+  "load_balancer": "172.198.75.141",
+  "findings": [
+    {
+      "type": "FAILOVER",
+      "status": "OBSERVED",
+      "message": "Traffic shifted away from VM01 to VM02 after VM01 failure."
+    },
+    {
+      "type": "AVAILABILITY",
+      "status": "PASSED",
+      "message": "No failed requests were observed during the measured failover phase."
+    },
+    {
+      "type": "RECOVERY",
+      "status": "OBSERVED",
+      "message": "VM01 returned to the load balancer traffic after recovery."
+    }
+  ],
+  "metrics": {
+    "BaselineToFailover": "00:02:07",
+    "FailoverToRecovery": "00:01:51",
+    "BaselineSuccessRate": 100,
+    "FailoverSuccessRate": 100,
+    "RecoverySuccessRate": 100,
+    "FailoverOccurred": true,
+    "RecoveryOccurred": true
+  }
+}
