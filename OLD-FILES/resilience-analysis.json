@@ -1,0 +1,11 @@
+{
+  "model": "gpt-5-mini-2025-08-07",
+  "experiment": "Azure Resilience Failover Test",
+  "analysis": {
+    "failover": "Traffic shifted from VM01 to VM02 after VM01 failure; measured failover interval 00:02:07.",
+    "availability": "No failed requests observed during the measured failover phase; FailoverSuccessRate 100%.",
+    "recovery": "VM01 returned to load balancer traffic after recovery; measured recovery interval 00:01:51.",
+    "risk": "Coverage limited to short measured intervals (00:02:07 and 00:01:51) and the observed single failover/recovery instance.",
+    "recommendation": "Repeat the failover/recovery test with longer observation windows and multiple iterations to validate stability."
+  }
+}
